@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aryan Singh - Resume</title>
+  <style>
+    /* Global Styles & Variables */
+    :root {
+      --primary-color: #000000;
+      --text-color: #222222;
+      --light-text: #555555;
+      --border-color: #cccccc;
+      --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      color: var(--text-color);
+      background-color: #f4f4f5;
+      line-height: 1.4;
+      font-size: 13.5px;
+      padding: 20px;
+    }
+
+    /* Container setup for standard paper width */
+    .resume-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 35px 45px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    /* Header Section */
+    header {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    header h1 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--primary-color);
+    }
+
+    .subtitle {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--light-text);
+      margin-top: 2px;
+    }
+
+    .contact-info {
+      margin-top: 6px;
+      font-size: 13px;
+      color: var(--light-text);
+    }
+
+    .contact-info a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    .separator {
+      margin: 0 4px;
+      color: #aaa;
+    }
+
+    /* Section Styling */
+    section {
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      border-bottom: 1px solid #222;
+      padding-bottom: 2px;
+      margin-bottom: 8px;
+    }
+
+    /* Entry Headers (Work & Education) */
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 13.5px;
+    }
+
+    .entry-title {
+      font-weight: 700;
+    }
+
+    .entry-location,
+    .entry-date {
+      font-size: 12.5px;
+      font-style: italic;
+      color: var(--light-text);
+    }
+
+    .entry-subtitle {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 13px;
+      font-style: italic;
+      margin-bottom: 4px;
+    }
+
+    /* Project Headers */
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 13.5px;
+      margin-bottom: 3px;
+    }
+
+    .project-title {
+      font-weight: 700;
+    }
+
+    .project-title a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 12px;
+    }
+
+    .project-title a:hover {
+      text-decoration: underline;
+    }
+
+    /* List Items */
+    ul {
+      list-style-type: disc;
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 3px;
+      font-size: 13px;
+    }
+
+    .tech-used {
+      margin-top: 2px;
+      font-size: 12.5px;
+    }
+
+    .tech-used strong {
+      font-weight: 600;
+    }
+
+    /* Skills Grid */
+    .skills-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .skills-list li {
+      margin-bottom: 4px;
+      font-size: 13px;
+    }
+
+    .skills-list strong {
+      font-weight: 600;
+    }
+
+    /* Print Optimization Rules */
+    @media print {
+      body {
+        background-color: #ffffff;
+        padding: 0;
+      }
+
+      .resume-container {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+
+      a {
+        text-decoration: none !important;
+        color: #000000 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="resume-container">
+    
+    <!-- HEADER -->
+    <header>
+      <h1>Aryan Singh</h1>
+      <div class="subtitle">Full Stack Developer</div>
+      <div class="contact-info">
+        7307646856 <span class="separator">|</span> 
+        <a href="mailto:aryansinghpm27@gmail.com">aryansinghpm27@gmail.com</a> <span class="separator">|</span> 
+        SANGRUR
+      </div>
+      <div class="contact-info">
+        <a href="https://linkedin.com">LinkedIn</a> <span class="separator">|</span> 
+        <a href="https://x.com">X (Twitter)</a> <span class="separator">|</span> 
+        <a href="https://github.com">GitHub</a> <span class="separator">|</span> 
+        <a href="https://portfolio.com">Portfolio</a> <span class="separator">|</span> 
+        <a href="https://codeforces.com">CodeForces</a>
+      </div>
+    </header>
+
+    <!-- WORK EXPERIENCE -->
+    <section>
+      <h2>Work Experience</h2>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Python Development Intern</span>
+          <span class="entry-date">Jun 2026 – Jul 2026</span>
+        </div>
+        <div class="entry-subtitle">
+          <span>Bheema Infotech</span>
+          <span class="entry-location">Remote</span>
+        </div>
+        <ul>
+          <li><strong>Student Score Prediction Linear Regression:</strong> Built a linear regression model from scratch using Python and NumPy to predict students' exam scores based on study hours. Calculated slope and intercept using covariance and variance, implementing the line of best fit without Scikit-Learn.</li>
+          <li><strong>Job Offer Prediction Logistic Regression:</strong> Implemented logistic regression from scratch using Python and NumPy to predict job-offer outcomes from input features. Applied the sigmoid function and gradient descent to generate probability-based predictions and optimize model parameters.</li>
+          <li class="tech-used"><strong>Technologies / Skills Used:</strong> Python, Pandas, NumPy, Matplotlib, PyTorch</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section>
+      <h2>Projects</h2>
+      
+      <div class="project" style="margin-bottom: 8px;">
+        <div class="project-header">
+          <span class="project-title">Open source contributions</span>
+          <span class="entry-date">May 2026 – Present</span>
+        </div>
+        <ul>
+          <li>Actively contributed to 10+ open source projects through merged pull requests on n8n.</li>
+          <li>Enhanced functionality and resolved 20+ issues in Remotion.</li>
+          <li>Collaborated on OpenStatus to improve project performance.</li>
+          <li class="tech-used"><strong>Technologies / Tools Used:</strong> React, Node.js, TypeScript, Tailwind CSS</li>
+        </ul>
+      </div>
+
+      <div class="project" style="margin-bottom: 8px;">
+        <div class="project-header">
+          <span class="project-title">
+            Chess Multiplayer Application 
+            <span class="separator">|</span> <a href="https://github.com">GitHub</a> 
+            <span class="separator">|</span> <a href="https://vercel.com">Vercel</a>
+          </span>
+          <span class="entry-date">Jan 2026 – Feb 2026</span>
+        </div>
+        <ul>
+          <li>Developed a real-time multiplayer chess platform with &lt;100ms move latency using WebSockets.</li>
+          <li>Implemented game state synchronization and enhanced session management for multiple concurrent users.</li>
+          <li>Designed a scalable monorepo architecture utilizing TurboRepo.</li>
+          <li class="tech-used"><strong>Technologies / Tools Used:</strong> Next.js, TypeScript, WebSockets, PostgreSQL, Prisma, React, Express, Tailwind CSS</li>
+        </ul>
+      </div>
+
+      <div class="project" style="margin-bottom: 8px;">
+        <div class="project-header">
+          <span class="project-title">
+            AI Powered RAG PDF Chat Application 
+            <span class="separator">|</span> <a href="https://github.com">GitHub</a> 
+            <span class="separator">|</span> <a href="https://vercel.com">Vercel</a>
+          </span>
+          <span class="entry-date">May 2026 – May 2026</span>
+        </div>
+        <ul>
+          <li>Built RAG-based AI application enabling users to upload PDFs and ask contextual questions in natural language.</li>
+          <li>Implemented semantic search, embeddings, retrieval pipelines, and LLM-based response generation.</li>
+          <li class="tech-used"><strong>Technologies / Tools Used:</strong> Next.js, TypeScript, LangChain, OpenAI, Hugging Face, Tailwind CSS</li>
+        </ul>
+      </div>
+
+      <div class="project" style="margin-bottom: 8px;">
+        <div class="project-header">
+          <span class="project-title">
+            Excalidraw Clone - Real-Time Collaborative Drawing App 
+            <span class="separator">|</span> <a href="https://github.com">GitHub</a>
+          </span>
+          <span class="entry-date">Oct 2025 – Oct 2025</span>
+        </div>
+        <ul>
+          <li>Built collaborative drawing platform with room-based canvases and persistence.</li>
+          <li>Implemented real-time multi-user synchronization using WebSockets.</li>
+          <li>Designed scalable database schema for storing and replaying canvas shapes.</li>
+          <li class="tech-used"><strong>Technologies / Tools Used:</strong> Next.js, TypeScript, Node.js, PostgreSQL, Prisma, Tailwind CSS, React</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <span class="project-title">
+            Arctic AI Dashboard - Web Hackathon Project 
+            <span class="separator">|</span> <a href="https://github.com">GitHub</a> 
+            <span class="separator">|</span> <a href="https://vercel.com">Vercel</a>
+          </span>
+          <span class="entry-date">Sep 2025 – Sep 2025</span>
+        </div>
+        <ul>
+          <li>Built interactive AI dashboard UI with animations and responsive layouts using React and Framer Motion.</li>
+          <li>Designed modern dashboard experience with reusable frontend components and dynamic visual interactions.</li>
+          <li>Developed as part of a web hackathon organized by IIT Bhubaneswar.</li>
+          <li class="tech-used"><strong>Technologies / Tools Used:</strong> React.js, Framer Motion, Tailwind CSS</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li><strong>Databases:</strong> PostgreSQL, MongoDB, Prisma ORM</li>
+        <li><strong>Frameworks & Libraries:</strong> React.js, Next.js, Tailwind CSS, HTML5, CSS3, Framer Motion</li>
+        <li><strong>Languages:</strong> English, Hindi</li>
+        <li><strong>Programming Languages:</strong> JavaScript, TypeScript, SQL, C++, Python, C, Go, OOPS</li>
+        <li><strong>Soft Skills:</strong> Communication, Leadership, Teamwork, Problem Solving, Decision Making, Adaptability</li>
+        <li><strong>Tools & Platforms:</strong> Node.js, Express.js, REST APIs, WebSockets, Socket.IO, JWT, Authentication, Middleware, API Design, MVC Architecture, Django, Git, Docker, TurboRepo, AWS, Vercel, Postman, DevOps, Figma</li>
+      </ul>
+    </section>
+
+    <!-- EDUCATION -->
+    <section>
+      <h2>Education</h2>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Sant Longowal Institute of Engineering and Technology</span>
+          <span class="entry-date">Aug 2024 – May 2028</span>
+        </div>
+        <div class="entry-subtitle">
+          <span>B.Tech CSE (CGPA: 7.35)</span>
+          <span class="entry-location">Longowal, Punjab</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
