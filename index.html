@@ -2,16 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aryan Singh - Resume</title>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Global Styles & Variables */
+    @page {
+      size: letter;
+      margin: 0.35in 0.4in;
+    }
+
     :root {
-      --primary-color: #000000;
-      --text-color: #222222;
-      --light-text: #555555;
-      --border-color: #cccccc;
-      --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --primary-blue: #223388;
+      --text-color: #111111;
+      --font-family: 'Times New Roman', Times, 'Computer Modern Roman', serif;
     }
 
     * {
@@ -23,182 +26,161 @@
     body {
       font-family: var(--font-family);
       color: var(--text-color);
-      background-color: #f4f4f5;
-      line-height: 1.4;
-      font-size: 13.5px;
-      padding: 20px;
+      background-color: #ffffff;
+      line-height: 1.28;
+      font-size: 10pt;
     }
 
-    /* Container setup for standard paper width */
     .resume-container {
       max-width: 800px;
       margin: 0 auto;
       background: #ffffff;
-      padding: 35px 45px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     }
 
-    /* Header Section */
+    /* Header Styling */
     header {
       text-align: center;
-      margin-bottom: 15px;
+      margin-bottom: 8px;
     }
 
     header h1 {
-      font-size: 26px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
+      font-size: 22pt;
+      font-weight: bold;
+      letter-spacing: 1px;
       text-transform: uppercase;
-      color: var(--primary-color);
+      margin-bottom: 1px;
     }
 
     .subtitle {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--light-text);
-      margin-top: 2px;
+      font-size: 11pt;
+      font-style: italic;
+      margin-bottom: 4px;
     }
 
     .contact-info {
-      margin-top: 6px;
-      font-size: 13px;
-      color: var(--light-text);
+      font-size: 9pt;
+      word-spacing: 0.5px;
     }
 
     .contact-info a {
       color: var(--text-color);
       text-decoration: none;
-      font-weight: 500;
     }
 
-    .contact-info a:hover {
-      text-decoration: underline;
+    .contact-info i {
+      font-size: 8.5pt;
+      margin-right: 2px;
     }
 
     .separator {
-      margin: 0 4px;
-      color: #aaa;
+      margin: 0 3px;
+      font-weight: normal;
     }
 
     /* Section Styling */
     section {
-      margin-bottom: 14px;
-    }
-
-    h2 {
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      border-bottom: 1px solid #222;
-      padding-bottom: 2px;
       margin-bottom: 8px;
     }
 
-    /* Entry Headers (Work & Education) */
-    .entry-header {
+    h2 {
+      font-size: 10.5pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--primary-blue);
+      border-bottom: 1px solid #000000;
+      padding-bottom: 1px;
+      margin-bottom: 4px;
+    }
+
+    /* Entry Headers */
+    .entry-header, .project-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      font-size: 13.5px;
+      font-size: 10pt;
     }
 
-    .entry-title {
-      font-weight: 700;
+    .entry-title, .project-title {
+      font-weight: bold;
     }
 
-    .entry-location,
+    .entry-title a, .project-title a {
+      color: var(--text-color);
+      text-decoration: none;
+    }
+
     .entry-date {
-      font-size: 12.5px;
-      font-style: italic;
-      color: var(--light-text);
+      font-size: 9.5pt;
     }
 
     .entry-subtitle {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      font-size: 13px;
+      font-size: 9.5pt;
       font-style: italic;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
 
-    /* Project Headers */
-    .project-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      font-size: 13.5px;
-      margin-bottom: 3px;
+    .role-title {
+      font-style: italic;
+      font-size: 9.5pt;
+      margin-bottom: 2px;
     }
 
-    .project-title {
-      font-weight: 700;
+    .sub-project-title {
+      font-weight: bold;
+      font-size: 9.5pt;
+      margin-top: 2px;
+      margin-bottom: 1px;
     }
 
-    .project-title a {
-      color: var(--text-color);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 12.5px;
+    .sub-project-title span {
+      font-weight: normal;
     }
 
-    .project-title a:hover {
-      text-decoration: underline;
-    }
-
-    /* List Items */
+    /* Lists */
     ul {
       list-style-type: disc;
-      padding-left: 18px;
+      padding-left: 16px;
     }
 
     li {
-      margin-bottom: 3px;
-      font-size: 13px;
+      margin-bottom: 1.5px;
+      font-size: 9.5pt;
+      text-align: justify;
     }
 
     .tech-used {
-      margin-top: 2px;
-      font-size: 12.5px;
+      list-style-type: none;
+      margin-left: -16px;
+      margin-top: 1px;
+      margin-bottom: 4px;
+      font-size: 9.5pt;
+      font-style: italic;
     }
 
     .tech-used strong {
-      font-weight: 600;
+      font-style: italic;
+      font-weight: bold;
     }
 
-    /* Skills Grid */
     .skills-list {
       list-style-type: none;
       padding-left: 0;
     }
 
     .skills-list li {
-      margin-bottom: 4px;
-      font-size: 13px;
+      margin-bottom: 2px;
+      font-size: 9.5pt;
+      text-align: left;
     }
 
-    .skills-list strong {
-      font-weight: 600;
-    }
-
-    /* Print Optimization Rules */
     @media print {
-      body {
-        background-color: #ffffff;
-        padding: 0;
-      }
-
-      .resume-container {
-        box-shadow: none;
-        padding: 0;
-        max-width: 100%;
-      }
-
-      a {
-        text-decoration: none !important;
-        color: #000000 !important;
-      }
+      body { padding: 0; }
+      .resume-container { max-width: 100%; }
+      a { color: #000000 !important; text-decoration: none !important; }
     }
   </style>
 </head>
@@ -211,16 +193,14 @@
       <h1>Aryan Singh</h1>
       <div class="subtitle">Full Stack Developer</div>
       <div class="contact-info">
-        7307646856 <span class="separator">|</span> 
-        <a href="mailto:aryansinghpm27@gmail.com">aryansinghpm27@gmail.com</a> <span class="separator">|</span> 
-        SANGRUR
-      </div>
-      <div class="contact-info">
-        <a href="https://www.linkedin.com/in/aryan-singh-25518533b/" target="_blank" rel="noopener noreferrer">LinkedIn</a> <span class="separator">|</span> 
-        <a href="https://x.com/trippyaryan18" target="_blank" rel="noopener noreferrer">X (Twitter)</a> <span class="separator">|</span> 
-        <a href="https://github.com/aryansingh1718" target="_blank" rel="noopener noreferrer">GitHub</a> <span class="separator">|</span> 
-        <a href="https://my-resume-lime-chi.vercel.app/" target="_blank" rel="noopener noreferrer">Portfolio</a> <span class="separator">|</span> 
-        <a href="https://codeforces.com/profile/aryansinghpm27" target="_blank" rel="noopener noreferrer">CodeForces</a>
+        <i class="fa-solid fa-phone"></i> 7307646856 <span class="separator">|</span> 
+        <i class="fa-solid fa-envelope"></i> <a href="mailto:aryansinghpm27@gmail.com">aryansinghpm27@gmail.com</a> <span class="separator">|</span> 
+        <i class="fa-solid fa-code"></i> <a href="https://codeforces.com/profile/aryansinghpm27">CodeForces</a> <span class="separator">|</span> 
+        <i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/aryan-singh-25518533b/">LinkedIn</a> <span class="separator">|</span> 
+        <i class="fa-brands fa-x-twitter"></i> <a href="https://x.com/trippyaryan18">X (Twitter)</a> <span class="separator">|</span> 
+        <i class="fa-brands fa-github"></i> <a href="https://github.com/aryansingh1718">GitHub</a> <span class="separator">|</span> 
+        <i class="fa-solid fa-globe"></i> <a href="https://my-resume-lime-chi.vercel.app/">Portfolio</a> <span class="separator">|</span> 
+        <i class="fa-solid fa-location-dot"></i> SANGRUR
       </div>
     </header>
 
@@ -236,10 +216,18 @@
           <span>Bheema Infotech</span>
           <span class="entry-location">Remote</span>
         </div>
+        
+        <div class="sub-project-title">Student Score Prediction <span>— Linear Regression</span></div>
         <ul>
-          <li><strong>Student Score Prediction Linear Regression:</strong> Built a linear regression model from scratch using Python and NumPy to predict students' exam scores based on study hours. Calculated slope and intercept using covariance and variance, implementing the line of best fit without Scikit-Learn.</li>
-          <li><strong>Job Offer Prediction Logistic Regression:</strong> Implemented logistic regression from scratch using Python and NumPy to predict job-offer outcomes from input features. Applied the sigmoid function and gradient descent to generate probability-based predictions and optimize model parameters.</li>
-          <li class="tech-used"><strong>Technologies / Skills Used:</strong> Python, Pandas, NumPy, Matplotlib, PyTorch</li>
+          <li>Built a linear regression model from scratch using <strong>Python and NumPy</strong> to predict students' exam scores based on study hours.</li>
+          <li>Calculated slope and intercept using <strong>covariance and variance</strong>, implementing the line of best fit without Scikit-Learn.</li>
+        </ul>
+
+        <div class="sub-project-title">Job Offer Prediction <span>— Logistic Regression</span></div>
+        <ul>
+          <li>Implemented logistic regression from scratch using <strong>Python and NumPy</strong> to predict job-offer outcomes from input features.</li>
+          <li>Applied the <strong>sigmoid function and gradient descent</strong> to generate probability-based predictions and optimize model parameters.</li>
+          <li class="tech-used"><strong>Technologies / Skills Used :</strong> python, Pandas, numPy, matPlotLib, pyTorch</li>
         </ul>
       </div>
     </section>
@@ -248,83 +236,86 @@
     <section>
       <h2>Projects</h2>
       
-      <div class="project" style="margin-bottom: 8px;">
+      <div class="project">
         <div class="project-header">
           <span class="project-title">Open source contributions</span>
           <span class="entry-date">May 2026 – Present</span>
         </div>
         <ul>
-          <li>Actively contributed to 10+ open source projects through merged pull requests on n8n.</li>
-          <li>Enhanced functionality and resolved 20+ issues in Remotion.</li>
-          <li>Collaborated on OpenStatus to improve project performance.</li>
-          <li class="tech-used"><strong>Technologies / Tools Used:</strong> React, Node.js, TypeScript, Tailwind CSS</li>
-        </ul>
-      </div>
-
-      <div class="project" style="margin-bottom: 8px;">
-        <div class="project-header">
-          <span class="project-title">
-            Chess Multiplayer Application 
-            <span class="separator">|</span> <a href="https://github.com/aryansingh1718/chess-game" target="_blank" rel="noopener noreferrer">GitHub</a> 
-            <span class="separator">|</span> <a href="https://chess-game-chess-frontend-f3ts.vercel.app/" target="_blank" rel="noopener noreferrer">Vercel</a>
-          </span>
-          <span class="entry-date">Jan 2026 – Feb 2026</span>
-        </div>
-        <ul>
-          <li>Developed a real-time multiplayer chess platform with &lt;100ms move latency using WebSockets.</li>
-          <li>Implemented game state synchronization and enhanced session management for multiple concurrent users.</li>
-          <li>Designed a scalable monorepo architecture utilizing TurboRepo.</li>
-          <li class="tech-used"><strong>Technologies / Tools Used:</strong> Next.js, TypeScript, WebSockets, PostgreSQL, Prisma, React, Express, Tailwind CSS</li>
-        </ul>
-      </div>
-
-      <div class="project" style="margin-bottom: 8px;">
-        <div class="project-header">
-          <span class="project-title">
-            AI Powered RAG PDF Chat Application 
-            <span class="separator">|</span> <a href="https://github.com/aryansingh1718/askMyPdf" target="_blank" rel="noopener noreferrer">GitHub</a> 
-            <span class="separator">|</span> <a href="https://ask-my-pdf-e2ht.vercel.app/" target="_blank" rel="noopener noreferrer">Vercel</a>
-          </span>
-          <span class="entry-date">May 2026 – May 2026</span>
-        </div>
-        <ul>
-          <li>Built RAG-based AI application enabling users to upload PDFs and ask contextual questions in natural language.</li>
-          <li>Implemented semantic search, embeddings, retrieval pipelines, and LLM-based response generation.</li>
-          <li class="tech-used"><strong>Technologies / Tools Used:</strong> Next.js, TypeScript, LangChain, OpenAI, Hugging Face, Tailwind CSS</li>
-        </ul>
-      </div>
-
-      <div class="project" style="margin-bottom: 8px;">
-        <div class="project-header">
-          <span class="project-title">
-            Excalidraw Clone - Real-Time Collaborative Drawing App 
-            <span class="separator">|</span> <a href="https://github.com/aryansingh1718/excalidraw-project" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <span class="separator">|</span> <a href="https://excalidraw-project-draw-frontend.vercel.app/" target="_blank" rel="noopener noreferrer">Vercel</a>
-          </span>
-          <span class="entry-date">Oct 2025 – Oct 2025</span>
-        </div>
-        <ul>
-          <li>Built collaborative drawing platform with room-based canvases and persistence.</li>
-          <li>Implemented real-time multi-user synchronization using WebSockets.</li>
-          <li>Designed scalable database schema for storing and replaying canvas shapes.</li>
-          <li class="tech-used"><strong>Technologies / Tools Used:</strong> Next.js, TypeScript, Node.js, PostgreSQL, Prisma, Tailwind CSS, React</li>
+          <li>Actively contributed to 10+ open source projects through merged pull requests on <strong>n8n</strong>.</li>
+          <li>Enhanced functionality and resolved 20+ issues in <strong>Remotion</strong>.</li>
+          <li>Collaborated on <strong>OpenStatus</strong> to improve project performance.</li>
+          <li class="tech-used"><strong>Technologies / Tools Used :</strong> React, Node.js, Typescript, Tailwind CSS</li>
         </ul>
       </div>
 
       <div class="project">
         <div class="project-header">
           <span class="project-title">
-            Arctic AI Dashboard - Web Hackathon Project 
-            <span class="separator">|</span> <a href="https://github.com/aryansingh1718/webHackathon" target="_blank" rel="noopener noreferrer">GitHub</a> 
-            <span class="separator">|</span> <a href="https://web-hackathon-rosy.vercel.app/" target="_blank" rel="noopener noreferrer">Vercel</a>
+            Chess Multiplayer Application <span class="separator">|</span> 
+            <i class="fa-solid fa-play" style="font-size: 8pt;"></i> <a href="https://chess-game-chess-frontend-f3ts.vercel.app/">Vercel</a> 
+            <i class="fa-brands fa-github"></i> <a href="https://github.com/aryansingh1718/chess-game">Github</a>
+          </span>
+          <span class="entry-date">Jan 2026 – Feb 2026</span>
+        </div>
+        <div class="role-title">Lead developer</div>
+        <ul>
+          <li>Developed a real-time multiplayer chess platform with <strong>&lt;100ms move latency using WebSockets</strong>.</li>
+          <li>Implemented <strong>game state synchronization</strong> and enhanced session management for multiple concurrent users.</li>
+          <li>Designed a <strong>scalable monorepo architecture utilizing TurboRepo</strong>.</li>
+          <li class="tech-used"><strong>Technologies / Tools Used :</strong> Next.js, TypeScript, WebSockets, PostgreSQL, Prisma, React, Express, Tailwind CSS</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <span class="project-title">
+            AI Powered RAG PDF Chat Application <span class="separator">|</span> 
+            <i class="fa-brands fa-github"></i> <a href="https://github.com/aryansingh1718/askMyPdf">Github</a> 
+            <i class="fa-solid fa-play" style="font-size: 8pt;"></i> <a href="https://ask-my-pdf-e2ht.vercel.app/">Vercel</a>
+          </span>
+          <span class="entry-date">May 2026 – May 2026</span>
+        </div>
+        <div class="role-title">Lead developer</div>
+        <ul>
+          <li>Built <strong>RAG-based AI application</strong> enabling users to upload PDFs and ask contextual questions in natural language.</li>
+          <li>Implemented <strong>semantic search, embeddings, retrieval pipelines</strong>, and LLM-based response generation.</li>
+          <li class="tech-used"><strong>Technologies / Tools Used :</strong> Next.js, TypeScript, LangChain, OpenAI, HuggingFace, Tailwind CSS</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <span class="project-title">
+            Excalidraw Clone – Real-Time Collaborative Drawing App <span class="separator">|</span> 
+            <i class="fa-brands fa-github"></i> <a href="https://github.com/aryansingh1718/excalidraw-project">Github</a>
+          </span>
+          <span class="entry-date">Oct 2025 – Oct 2025</span>
+        </div>
+        <div class="role-title">Lead developer</div>
+        <ul>
+          <li>Built <strong>collaborative drawing platform</strong> with room-based canvases and persistence.</li>
+          <li>Implemented <strong>real-time multi-user synchronization using WebSockets</strong>.</li>
+          <li>Designed <strong>scalable database schema</strong> for storing and replaying canvas shapes.</li>
+          <li class="tech-used"><strong>Technologies / Tools Used :</strong> Next.js, TypeScript, Node.js, PostgreSQL, Prisma, Tailwind CSS, React</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <span class="project-title">
+            Arctic AI Dashboard – Web Hackathon Project <span class="separator">|</span> 
+            <i class="fa-brands fa-github"></i> <a href="https://github.com/aryansingh1718/webHackathon">Github</a> 
+            <i class="fa-solid fa-play" style="font-size: 8pt;"></i> <a href="https://web-hackathon-rosy.vercel.app/">Vercel</a>
           </span>
           <span class="entry-date">Sep 2025 – Sep 2025</span>
         </div>
+        <div class="role-title">Lead developer</div>
         <ul>
           <li>Built interactive AI dashboard UI with animations and responsive layouts using React and Framer Motion.</li>
           <li>Designed modern dashboard experience with reusable frontend components and dynamic visual interactions.</li>
           <li>Developed as part of a web hackathon organized by IIT Bhubaneswar.</li>
-          <li class="tech-used"><strong>Technologies / Tools Used:</strong> React.js, Framer Motion, Tailwind CSS</li>
+          <li class="tech-used"><strong>Technologies / Tools Used :</strong> React.js, Framer Motion, Tailwind CSS</li>
         </ul>
       </div>
     </section>
